@@ -3,7 +3,7 @@ import { MdWorkOutline } from 'react-icons/md';
 
 export default function ExperienceCard(props: ExperienceProps) {
     return (
-        <div className="flex flex-row items-center gap-8 border divide-x-2 divide-gray-500 border-gray-00 dark:border-gray-800 bg-white dark:bg-[#1f1f1f] rounded-md p-5">
+        <div className="flex flex-row items-center gap-8 border divide-x-2 divide-gray-500 border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1f1f1f] rounded-md p-5">
             {props.image && <img src={props.image} alt={props.name} className="w-20 max-h-20" />}
             {!props.image && <MdWorkOutline className="w-[100px] h-20 text-gray-700 dark:text-gray-400" />}
             <div className="flex flex-col pl-5 w-full">

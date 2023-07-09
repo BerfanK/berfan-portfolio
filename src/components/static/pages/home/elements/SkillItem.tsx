@@ -29,7 +29,7 @@ export default function SkillItem({ name, svgIcon, stars }: SkillItemProps) {
     };
 
     return (
-        <div className="border-2 border-gray-800 rounded p-5">
+        <div className="border-2 border-gray-200 dark:border-gray-800 rounded p-5">
             <div className="flex flex-row items-center gap-4">
                 {svgIcon}
                 <div className="flex flex-col">
