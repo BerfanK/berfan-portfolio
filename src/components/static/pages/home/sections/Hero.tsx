@@ -5,8 +5,8 @@ export default function Hero() {
         <div className="flex flex-row items-center justify-between w-full gap-8">
             <div className="flex flex-col lg:max-w-[60%]">
                 <h1 className="text-3xl lg:text-5xl font-bold">Berfan's Portfolio</h1>
-                <p className="lg:text-lg font-semibold mt-4 text-gray-300/80">Welcome to my portfolio website 🌱</p>
-                <p className="lg:text-lg font-semibold mt-4 text-gray-300/80">
+                <p className="lg:text-lg font-semibold mt-4 text-gray-500 dark:text-gray-300/80">Welcome to my portfolio website 🌱</p>
+                <p className="lg:text-lg font-semibold mt-4 text-gray-500 dark:text-gray-300/80">
                     I'm a software developer based in Switzerland. I love to build{' '}
                     <Link to="/projects" className="link">
                         projects

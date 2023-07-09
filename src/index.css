@@ -8,7 +8,7 @@
 
 @layer base {
     body {
-        @apply bg-[#181818] text-white font-sans;
+        @apply bg-white text-black dark:bg-[#181818] dark:text-white font-sans;
     }
 }
 
@@ -21,6 +21,9 @@
     }
     .btn-dark {
         @apply bg-[#252525] rounded p-2 cursor-pointer border border-transparent hover:border-gray-600;
+    }
+    .btn-light {
+        @apply bg-[#f5f5f5] rounded p-2 cursor-pointer border border-transparent hover:border-gray-600;
     }
 }
 
