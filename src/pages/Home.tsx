@@ -1,14 +1,20 @@
+import { Fragment } from 'react';
+
+/* Sections */
+import Hero from '../components/static/pages/home/sections/Hero';
+import Projects from '../components/static/pages/home/sections/Projects';
+import Skills from '../components/static/pages/home/sections/Skills';
+import Experiences from '../components/static/pages/home/sections/Experiences';
+import Education from '../components/static/pages/home/sections/Education';
+
 export default function Home() {
-  return (
-    <div className="container">
-      <header className="flex flex-col items-center justify-center min-h-screen py-2">
-        <h1 className="text-6xl font-bold">
-          Welcome to{" "}
-          <a className="text-blue-600" href="https://reactjs.org">
-            React.js!
-          </a>
-        </h1>
-      </header>
-    </div>
-  );
+    return (
+        <Fragment>
+            <Hero />
+            <Projects />
+            <Skills />
+            <Experiences />
+            <Education />
+        </Fragment>
+    );
 }

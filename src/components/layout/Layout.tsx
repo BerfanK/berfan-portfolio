@@ -1,18 +1,19 @@
-import React, { ReactNode } from "react";
-import Sidebar from "./Sidebar";
+import { ReactNode } from 'react';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 type LayoutProps = {
-  children: ReactNode;
+    children: ReactNode;
 };
 
 export default function Layout({ children }: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState<boolean>(false);
-  return (
-    <div className="flex h-screen">
-      {/* <Sidebar isOpen={isSidebarOpen} setOpen={setIsSidebarOpen} /> */}
-      <div className="flex flex-col flex-1 overflow-y-auto">
-        <main className="flex-grow">{children}</main>
-      </div>
-    </div>
-  );
+    return (
+        <div className="flex h-screen">
+            <div className="flex flex-col flex-1 overflow-y-auto">
+                <Navigation />
+                <main className="flex-grow container py-10">{children}</main>
+                <Footer />
+            </div>
+        </div>
+    );
 }
