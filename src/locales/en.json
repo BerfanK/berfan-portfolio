@@ -1,0 +1,50 @@
+{
+    "Navigation": {
+        "FirstItem": "About",
+        "SecondItem": "Projects",
+        "ThirdItem": "Skills",
+        "FourthItem": "Education"
+    },
+    "Languages": {
+        "English": "English",
+        "German": "German"
+    },
+    "Home": {
+        "Hero": {
+            "Title": "Berfan's Portfolio",
+            "Subtitle": "Welcome to my portfolio website 🌱",
+            "Description": "I'm a software developer based in Switzerland. I love to build projects and aquire new skills. I mainly work with web technologies, but I'm also interested in other fields of software development."
+        },
+        "Projects": {
+            "Title": "Latest Projects",
+            "Button": "View all"
+        },
+        "Skills": {
+            "Title": "Skills & Knowledge",
+            "SearchPlaceholder": "Search...",
+            "BestRated": "Best rated",
+            "WorstRated": "Worst rated",
+            "AllMixed": "All mixed",
+            "Frontend": "Frontend",
+            "Backend": "Backend",
+            "Database": "Database",
+            "Productivity": "Productivity",
+            "Sidenote": "Sidenote: Low-rated skills are not necessarily bad. It just means that I haven't used them in a while."
+        },
+        "Experiences": {
+            "Title": "Experiences",
+            "Fulltime": "Full-time",
+            "Parttime": "Part-time",
+            "Internship": "Internship",
+            "Present": "Present"
+        },
+        "Education": {
+            "Title": "Education",
+            "Present": "Present",
+            "PrimarySchool": "Primary school",
+            "SecondarySchool": "Secondary school",
+            "FurtherEducation": "Further education",
+            "University": "University"
+        }
+    }
+}

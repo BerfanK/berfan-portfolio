@@ -38,7 +38,7 @@ export default function SkillFilter({ setOpen, selectedFilter, handleFilter }: S
                         key={index}
                         onClick={() => handleFilter(skill as SkillType)}
                         className={classNames('border border-gray-600 bg-transparent hover:bg-gray-600/60 duration-200 cursor-pointer rounded p-2 flex flex-row items-center gap-4', {
-                            'border-blue-400 bg-gray-700 text-white dark:bg-gray-600/20 dark:text-black': selectedFilter === skill,
+                            'border-blue-400 bg-gray-200 text-black dark:bg-gray-600/20 dark:text-white': selectedFilter === skill,
                         })}
                     >
                         <AiOutlineSelect className="w-4 h-4" />

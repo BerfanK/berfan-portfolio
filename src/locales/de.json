@@ -1,0 +1,50 @@
+{
+    "Navigation": {
+        "FirstItem": "Über",
+        "SecondItem": "Projekte",
+        "ThirdItem": "Fähigkeiten",
+        "FourthItem": "Ausbildung"
+    },
+    "Languages": {
+        "English": "Englisch",
+        "German": "Deutsch"
+    },
+    "Home": {
+        "Hero": {
+            "Title": "Berfan's Portfolio",
+            "Subtitle": "Willkommen auf meiner Portfolio-Website 🌱",
+            "Description": "Ich bin ein Softwareentwickler mit Sitz in der Schweiz. Ich liebe es, Projekte zu entwickeln und mir neue Fähigkeiten anzueignen. Ich arbeite hauptsächlich mit Webtechnologien, interessiere mich aber auch für andere Bereiche der Softwareentwicklung."
+        },
+        "Projects": {
+            "Title": "Neueste Projekte",
+            "Button": "Alle anzeigen"
+        },
+        "Skills": {
+            "Title": "Fähigkeiten und Kenntnisse",
+            "SearchPlaceholder": "Suchen...",
+            "BestRated": "Bestbewertet",
+            "WorstRated": "Schlechtestbewertet",
+            "AllMixed": "Alle gemischt",
+            "Frontend": "Frontend",
+            "Backend": "Backend",
+            "Database": "Datenbank",
+            "Productivity": "Produktivität",
+            "Sidenote": "Nebenbemerkung: Niedrig bewertete Fähigkeiten sind nicht unbedingt schlecht. Es bedeutet nur, dass ich sie schon eine Weile nicht mehr benutzt habe."
+        },
+        "Experiences": {
+            "Title": "Erfahrungen",
+            "Fulltime": "Vollzeit",
+            "Parttime": "Teilzeit",
+            "Internship": "Praktikum",
+            "Present": "Anwesend"
+        },
+        "Education": {
+            "Title": "Ausbildung",
+            "Present": "Anwesend",
+            "PrimarySchool": "Grundschule",
+            "SecondarySchool": "Sekundarschule",
+            "FurtherEducation": "Weiterführende Schule",
+            "University": "Universität"
+        }
+    }
+}

@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import { Data } from '../../../../../config/Data';
 import { ExperienceProps } from '../../../../../config/Types';
 import ExperienceCard from '../elements/ExperienceCard';
 
 export default function Experiences() {
+    const { t } = useTranslation();
+
     return (
         <section className="mt-20">
-            <h2 className="text-3xl font-bold">Experiences</h2>
+            <h2 className="text-3xl font-bold">{t('Home.Experiences.Title')}</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-8">
                 {Data.EXPERIENCES_DATA.map((experience: ExperienceProps, index: number) => (
@@ -14,7 +17,8 @@ export default function Experiences() {
                         name={experience.name}
                         company={experience.company}
                         type={experience.type}
-                        date={experience.date}
+                        startDate={experience.startDate}
+                        endDate={experience.endDate}
                         image={experience.image}
                         isPresent={experience.isPresent}
                     />

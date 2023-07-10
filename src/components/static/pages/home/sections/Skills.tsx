@@ -8,8 +8,11 @@ import { SkillType } from '../../../../../config/Enums';
 import classNames from 'classnames';
 import SkillFilter from '../elements/SkillFilter';
 import SkillItem from '../elements/SkillItem';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
+    const { t } = useTranslation();
+
     const [skillData, setSkillData] = useState(Data.SKILLS_DATA);
     const [searchSkill, setSearchSkill] = useState('');
     const [sortSkill, setSortSkill] = useState('asc');
@@ -49,13 +52,13 @@ export default function Skills() {
 
     return (
         <section className="mt-20">
-            <h2 className="text-3xl font-bold">Skills & Knowledge</h2>
+            <h2 className="text-3xl font-bold">{t('Home.Skills.Title')}</h2>
             <div className="flex flex-row items-center gap-4 mt-8">
                 <div className="relative hidden lg:block">
                     <input
                         type="text"
                         value={searchSkill}
-                        placeholder="Search..."
+                        placeholder={t('Home.Skills.SearchPlaceholder')}
                         onChange={handleSearch}
                         className="w-full border border-gray-700 text-gray-700 dark:text-gray-400 hover:border-gray-500/60 bg-transparent font-medium rounded-md py-2 px-3 pl-10 transition duration-200 focus:outline-none"
                     />
@@ -65,7 +68,9 @@ export default function Skills() {
                 </div>
                 <div onClick={handleSort} className="select-none flex flex-row items-center gap-2 border border-gray-700 hover:border-gray-500/60 duration-200 rounded cursor-pointer py-2 px-3">
                     <BsFilterLeft className="h-6 w-6" />
-                    <span className="text-base font-medium text-gray-700 dark:text-gray-400 hidden lg:inline-flex">{sortSkill === 'asc' ? 'Best rated' : 'Worst rated'}</span>
+                    <span className="text-base font-medium text-gray-700 dark:text-gray-400 hidden lg:inline-flex">
+                        {sortSkill === 'asc' ? t('Home.Skills.BestRated') : t('Home.Skills.WorstRated')}
+                    </span>
                 </div>
                 <div className="relative">
                     <div
@@ -75,7 +80,9 @@ export default function Skills() {
                         })}
                     >
                         <CgStyle className="h-6 w-6" />
-                        <span className="text-base font-medium text-gray-700 dark:text-gray-400 hidden lg:inline-flex">{filterSkill === SkillType.All ? 'All mixed' : filterSkill}</span>
+                        <span className="text-base font-medium text-gray-700 dark:text-gray-400 hidden lg:inline-flex">
+                            {filterSkill === SkillType.All ? t('Home.Skills.AllMixed') : t(`Home.Skills.${filterSkill}`)}
+                        </span>
                         <BsChevronDown className={classNames('text-gray-700 dark:text-gray-400 h-4 w-4 duration-200', { 'transform rotate-180': isSkillFilterOpen })} />
                     </div>
                     <Transition
@@ -93,9 +100,7 @@ export default function Skills() {
             </div>
             <div></div>
 
-            <p className="text-base text-gray-700 dark:text-gray-400 font-light mt-4">
-                <b>Sidenote:</b> Low-rated skills are not necessarily bad. It just means that I haven't used them in a while.
-            </p>
+            <p className="text-base text-gray-700 dark:text-gray-400 font-light mt-4">{t('Home.Skills.Sidenote')}</p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4 pr-3">
                 {skillData.map((skill: SkillsProps, index: number) => (
