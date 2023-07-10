@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { Data } from '../../../../../config/Data';
-import { EducationProps } from '../../../../../config/Types';
-import EducationCard from '../elements/EducationCard';
+import { Data } from '../../../../config/Data';
+import { EducationProps } from '../../../../config/Types';
+import EducationCard from './elements/EducationCard';
 
 export default function Education() {
     const { t } = useTranslation();

@@ -10,6 +10,7 @@ import './index.css';
 /* Pages */
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
+import Projects from './pages/Projects.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="about" element={<About />} />
+                    <Route path="projects" element={<Projects />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

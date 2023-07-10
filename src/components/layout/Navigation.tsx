@@ -71,28 +71,58 @@ export default function Navigation() {
                     </Link>
                     <Link
                         to="/projects"
-                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        className={classNames(
+                            'text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
+                            location.pathname === '/projects' ? 'font-semibold border-black dark:border-white' : ''
+                        )}
                     >
                         {t('Navigation.SecondItem')}
                     </Link>
-                    <Link
-                        to="#skills"
-                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
-                    >
-                        {t('Navigation.ThirdItem')}
-                    </Link>
-                    <a
-                        href="#experiences"
-                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
-                    >
-                        {t('Navigation.FourthItem')}
-                    </a>
-                    <a
-                        href="#education"
-                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
-                    >
-                        {t('Navigation.FifthItem')}
-                    </a>
+                    {location.pathname === '/' ? (
+                        <a
+                            href="#skills"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.ThirdItem')}
+                        </a>
+                    ) : (
+                        <Link
+                            to="/?to=skills"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.ThirdItem')}
+                        </Link>
+                    )}
+                    {location.pathname === '/' ? (
+                        <a
+                            href="#experiences"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.FourthItem')}
+                        </a>
+                    ) : (
+                        <Link
+                            to="/?to=experiences"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.FourthItem')}
+                        </Link>
+                    )}
+                    {location.pathname === '/' ? (
+                        <a
+                            href="#education"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.FifthItem')}
+                        </a>
+                    ) : (
+                        <Link
+                            to="/?to=education"
+                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        >
+                            {t('Navigation.FifthItem')}
+                        </Link>
+                    )}
                 </div>
                 <div className="hidden lg:flex flex-row items-center gap-2">
                     <LanguageSwitch />

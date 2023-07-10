@@ -88,5 +88,9 @@
                 "FourthItem": "<b>Tools:</b> <viteLink>Vite Build-Tool</viteLink>, <reactLink>React.js</reactLink> (TS), <tailwindLink>TailwindCSS</tailwindLink>"
             }
         }
+    },
+    "Projects": {
+        "Title": "My Projects",
+        "Empty": "There are no projects to see here at this time."
     }
 }

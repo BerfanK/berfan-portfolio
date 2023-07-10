@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { Data } from '../../../../../config/Data';
-import { ExperienceProps } from '../../../../../config/Types';
-import ExperienceCard from '../elements/ExperienceCard';
+import { Data } from '../../../../config/Data';
+import { ExperienceProps } from '../../../../config/Types';
+import ExperienceCard from './elements/ExperienceCard';
 
 export default function Experiences() {
     const { t } = useTranslation();

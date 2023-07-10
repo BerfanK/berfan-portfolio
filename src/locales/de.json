@@ -43,7 +43,7 @@
         "Education": {
             "Title": "Ausbildung",
             "Present": "Anwesend",
-            "PrimarySchool": "Grundschule",
+            "PrimarySchool": "Primarschule",
             "SecondarySchool": "Sekundarschule",
             "FurtherEducation": "Weiterführende Schule",
             "University": "Universität"
@@ -88,5 +88,9 @@
                 "FourthItem": "<b>Tools:</b> <viteLink>Vite Build-Tool</viteLink>, <reactLink>React.js</reactLink> (TS), <tailwindLink>TailwindCSS</tailwindLink>"
             }
         }
+    },
+    "Projects": {
+        "Title": "Meine Projekte",
+        "Empty": "Es gibt hier zurzeit keine Projekte zu sehen."
     }
 }

@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { BsChevronDown, BsFilterLeft, BsFilterRight, BsSearch } from 'react-icons/bs';
 import { CgStyle } from 'react-icons/cg';
-import { SkillsProps } from '../../../../../config/Types';
-import { Data } from '../../../../../config/Data';
-import { SkillType } from '../../../../../config/Enums';
+import { SkillsProps } from '../../../../config/Types';
+import { Data } from '../../../../config/Data';
+import { SkillType } from '../../../../config/Enums';
 import classNames from 'classnames';
-import SkillFilter from '../elements/SkillFilter';
-import SkillItem from '../elements/SkillItem';
+import SkillFilter from './elements/SkillFilter';
+import SkillItem from './elements/SkillItem';
 import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
