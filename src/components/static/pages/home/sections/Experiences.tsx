@@ -7,10 +7,10 @@ export default function Experiences() {
     const { t } = useTranslation();
 
     return (
-        <section className="mt-20">
-            <h2 className="text-3xl font-bold">{t('Home.Experiences.Title')}</h2>
+        <section id="experiences" className="mt-20">
+            <h2 className="lg:text-3xl font-bold">{t('Home.Experiences.Title')}</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-5">
                 {Data.EXPERIENCES_DATA.map((experience: ExperienceProps, index: number) => (
                     <ExperienceCard
                         key={index}

@@ -9,6 +9,7 @@ import './index.css';
 
 /* Pages */
 import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="about" element={<About />} />
                 </Routes>
             </Layout>
         </BrowserRouter>

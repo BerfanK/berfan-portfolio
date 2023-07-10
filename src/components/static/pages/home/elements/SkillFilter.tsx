@@ -23,14 +23,17 @@ export default function SkillFilter({ setOpen, selectedFilter, handleFilter }: S
     });
 
     return (
-        <div ref={cardRef} className="bg-white dark:bg-[#181818] border border-gray-700 rounded shadow-md shadow-blue-300/10 p-5 w-screen max-w-[500px] absolute top-[10px] left-0">
+        <div
+            ref={cardRef}
+            className="bg-white dark:bg-[#181818] border border-gray-700 rounded shadow-md shadow-blue-300/10 p-5 w-screen max-w-[300px] lg:max-w-[500px] absolute right-0 top-[10px] lg:left-0"
+        >
             <div className="flex flex-row items-center justify-between mb-1">
-                <h2 className="text-lg font-semibold">Filter Selection</h2>
+                <h2 className="lg:text-lg font-semibold">Filter Selection</h2>
                 <div onClick={() => setOpen(false)} className="p-1 hover:bg-gray-500/60 duration-200 rounded cursor-pointer">
                     <RxCross1 className="h-5 w-5 text-white cursor-pointer" />
                 </div>
             </div>
-            <p className="text-base text-gray-700 dark:text-gray-400 font-light">Keep it organized! You can filter the skills by their type. </p>
+            <p className="text-sm lg:text-base text-gray-700 dark:text-gray-400 font-light">Keep it organized! You can filter the skills by their type. </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5">
                 {Object.values(SkillType).map((skill: string, index: number) => (

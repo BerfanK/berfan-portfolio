@@ -3,7 +3,8 @@
         "FirstItem": "Über",
         "SecondItem": "Projekte",
         "ThirdItem": "Fähigkeiten",
-        "FourthItem": "Ausbildung"
+        "FourthItem": "Erfahrungen",
+        "FifthItem": "Ausbildung"
     },
     "Languages": {
         "English": "Englisch",
@@ -17,7 +18,8 @@
         },
         "Projects": {
             "Title": "Neueste Projekte",
-            "Button": "Alle anzeigen"
+            "Button": "Alle anzeigen",
+            "Empty": "Es gibt zurzeit keine Projekte."
         },
         "Skills": {
             "Title": "Fähigkeiten und Kenntnisse",
@@ -45,6 +47,46 @@
             "SecondarySchool": "Sekundarschule",
             "FurtherEducation": "Weiterführende Schule",
             "University": "Universität"
+        }
+    },
+    "About": {
+        "Title": "Über mich",
+        "Me": "Ich",
+        "General": "Hey, ich bin Berfan! Ich bin ein 19 Jahre junger Software-Entwickler aus der Türkei, geboren in der Schweiz. Ich besuche derzeit die <schoolLink>Informatikmittelschule</schoolLink> in Basel und befinde mich im letzten, vierten Schul- bzw. Praktikumsjahr. Ich absolviere mein Praktikum bei der Firma <companyLink>Smart Work AG Basel</companyLink> als Software-Entwickler und habe am 23. Juni 2023 meinen Informatiker EFZ Abschluss mit einer EFZ-Note von 5.4 abgeschlossen. Im September 2023 steht dann für mich das BSc Studium im Informatik-Bereich an!",
+        "History": {
+            "Title": "Meine Geschichte",
+            "FirstSubtitle": "14. Lebensalter (2017)",
+            "FirstSection": "Mit 14 Jahren habe ich die Programmierwelt entdeckt. Durch <minecraftLink>Minecraft</minecraftLink> (Videospiel) wurde mein Interesse am Entwickeln geweckt, und ich habe meine allererste Programmiersprache, <javaLink>Java</javaLink>, gelernt. Ich war immer mehr fasziniert von der Informatik und wollte an die <schoolLink>Informatikmittelschule</schoolLink> gehen, um meine Kenntnisse zu vertiefen.",
+            "SecondSubtitle": "16. - 19. Lebensalter: Informatikmittelschule (2019 - 2022)",
+            "SecondSection": "In der <schoolLink>Informatikmittelschule</schoolLink> habe ich Websites mit <htmlLink>HTML</htmlLink> & <cssLink>CSS</cssLink> erstellt und meine Leidenschaft für Webseiten entdeckt. Ich habe mich kontinuierlich weiterentwickelt und andere Programmiersprachen wie <phpLink>PHP</phpLink> gelernt. Zudem habe ich meine Kenntnisse in der Programmierung durch das Erlernen von <pythonLink>Python</pythonLink>, <csharpLink>C#</csharpLink> und <bootstrapLink>Bootstrap</bootstrapLink> für CSS erweitert.",
+            "ThirdSubtitle": "Praktikum und vertiefte Kenntnisse (2022 - 2023)",
+            "ThirdSection": "Im Rahmen meines Praktikums, das Teil meines IMS-Abschlusses war, habe ich das <angularLink>Angular-Framework</angularLink> und das <expressLink>Express-Backend</expressLink> erlernt. Darüber hinaus habe ich in den Bereichen Marketing, Verkauf, Grafikdesign und Events wertvolle Erfahrungen gesammelt. Währenddessen musste ich die letzte Prüfung für meinen Informatik-Abschluss ablegen. Ich habe mich privat weiterentwickelt und meine Fähigkeiten in <reactLink>React.js</reactLink> und <tailwindLink>Tailwind CSS</tailwindLink> vertieft, indem ich erfolgreich eine teambasierte TODO-Applikation entwickelt habe.",
+            "FourthSubtitle": "Abschluss und Ausblick (2023)",
+            "FourthSection": "Am 23. Juni 2023 habe ich mein Berufsmaturitäts- und Eidgenössisches Fähigkeitszeugnis erhalten, womit ein bedeutender Abschnitt meines Lebens abgeschlossen ist. Mein nächster großer Schritt ist das anstehende Informatik-Studium in der <fhnwLink>FHNW</fhnwLink> im September 2023, in dem ich mein Wissen im Bereich der Softwareentwicklung weiter vertiefen werde."
+        },
+        "Favorites": {
+            "Title": "Meine Favoriten",
+            "FirstItem": "🎨 Farbe",
+            "FirstResult": "Blau",
+            "SecondItem": "🍔 Essen",
+            "SecondResult": "<foodLink>Etli Ekmek</foodLink> (Türkische Spezialität)",
+            "ThirdItem": "🥤 Getränk",
+            "ThirdResult": "Eistee",
+            "FourthItem": "🎮 Spiel",
+            "FourthResult": "<gameLink>CS:GO</gameLink>",
+            "FifthItem": "🌞 Saison",
+            "FifthResult": "Frühling",
+            "SixthItem": "🐶 Tier",
+            "SixthResult": "Roter Panda"
+        },
+        "Tools": {
+            "Title": "Website-Informationen",
+            "Software": {
+                "FirstItem": "Diese Website wird auf <cfLink>Cloudflare Pages</cfLink> gehostet.",
+                "SecondItem": "Die Website ist inspiriert von <taniaLink>Tania Rascia's Portfolio</taniaLink>. Selbstentwickelt.",
+                "ThirdItem": "<b>IDE:</b> <vscodeLink>Visual Studio Code</vscodeLink>",
+                "FourthItem": "<b>Tools:</b> <viteLink>Vite Build-Tool</viteLink>, <reactLink>React.js</reactLink> (TS), <tailwindLink>TailwindCSS</tailwindLink>"
+            }
         }
     }
 }

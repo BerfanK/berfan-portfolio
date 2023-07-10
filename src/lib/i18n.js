@@ -18,7 +18,7 @@ i18n.use(LanguageDetector)
             de: { translation: de },
         },
         detection: {
-            order: ['path', 'navigator', 'querystring', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
+            order: ['querystring', 'cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
             caches: ['cookie'],
         },
         react: {
@@ -31,6 +31,7 @@ i18n.use(LanguageDetector)
             // It updates the URL with the new language code
             bindRoute: 'path',
             routeParam: 'lang',
+            transSupportBasicHtmlNodes: true,
         },
     });
 

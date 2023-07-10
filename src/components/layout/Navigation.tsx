@@ -1,7 +1,9 @@
 import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LanguageSwitch from '../static/global/LanguageSwitch';
 import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
+import { useEffect, useState } from 'react';
 
 /**
  * Navigation component of the application.
@@ -10,18 +12,44 @@ import { useTranslation } from 'react-i18next';
  */
 export default function Navigation() {
     const { t } = useTranslation();
+    const location = useLocation();
+
+    const [isDarkmode, setIsDarkmode] = useState(false);
 
     const toggleTheme = () => {
-        window.document.body.classList.toggle('dark');
-
-        if (window.document.body.classList.contains('dark')) {
-            window.document.body.classList.remove('bg-white', 'text-black');
-            window.document.body.classList.add('bg-[#181818]', 'text-white');
-        } else {
+        if (isDarkmode) {
+            window.document.body.classList.remove('dark');
             window.document.body.classList.remove('bg-[#181818]', 'text-white');
             window.document.body.classList.add('bg-white', 'text-black');
+            window.localStorage.setItem('theme', 'light');
+            setIsDarkmode(false);
+        } else {
+            window.document.body.classList.add('dark');
+            window.document.body.classList.remove('bg-white', 'text-black');
+            window.document.body.classList.add('bg-[#181818]', 'text-white');
+            window.localStorage.setItem('theme', 'dark');
+            setIsDarkmode(true);
         }
     };
+
+    const loadTheme = () => {
+        const theme = window.localStorage.getItem('theme');
+        if (theme === 'dark') {
+            window.document.body.classList.add('dark');
+            window.document.body.classList.remove('bg-white', 'text-black');
+            window.document.body.classList.add('bg-[#181818]', 'text-white');
+            setIsDarkmode(true);
+        } else {
+            window.document.body.classList.remove('dark');
+            window.document.body.classList.remove('bg-[#181818]', 'text-white');
+            window.document.body.classList.add('bg-white', 'text-black');
+            setIsDarkmode(false);
+        }
+    };
+
+    useEffect(() => {
+        loadTheme();
+    }, [isDarkmode]);
 
     return (
         <div className="container my-10">
@@ -31,34 +59,40 @@ export default function Navigation() {
                 </Link>
             </header>
             <nav className="mt-2 flex flex-row items-center justify-between">
-                <div className="flex flex-row items-center gap-4 lg:gap-8">
+                <div className="flex flex-row flex-wrap items-center gap-x-4">
                     <Link
-                        to="/"
-                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                        to="/about"
+                        className={classNames(
+                            'text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
+                            location.pathname === '/about' ? 'font-semibold border-black dark:border-white' : ''
+                        )}
                     >
                         {t('Navigation.FirstItem')}
                     </Link>
                     <Link
-                        to="/"
+                        to="/projects"
                         className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                     >
-                        {' '}
                         {t('Navigation.SecondItem')}
                     </Link>
                     <Link
-                        to="/"
+                        to="#skills"
                         className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                     >
-                        {' '}
                         {t('Navigation.ThirdItem')}
                     </Link>
-                    <Link
-                        to="/"
+                    <a
+                        href="#experiences"
                         className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                     >
-                        {' '}
                         {t('Navigation.FourthItem')}
-                    </Link>
+                    </a>
+                    <a
+                        href="#education"
+                        className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                    >
+                        {t('Navigation.FifthItem')}
+                    </a>
                 </div>
                 <div className="hidden lg:flex flex-row items-center gap-2">
                     <LanguageSwitch />

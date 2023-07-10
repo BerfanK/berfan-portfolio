@@ -21,7 +21,10 @@ function LanguageSwitch() {
 
     useEffect(() => {
         const language = cookies.get('i18next');
-        if (language) setSelectedLanguage(Data.LANGUAGES_DATA.find((l) => l.code === language) || Data.LANGUAGES_DATA[0]);
+        if (language) {
+            setSelectedLanguage(Data.LANGUAGES_DATA.find((l) => l.code === language) || Data.LANGUAGES_DATA[0]);
+            i18n.changeLanguage(language);
+        }
 
         const handleOutsideClick = (event: any) => {
             if (

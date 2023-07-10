@@ -3,7 +3,8 @@
         "FirstItem": "About",
         "SecondItem": "Projects",
         "ThirdItem": "Skills",
-        "FourthItem": "Education"
+        "FourthItem": "Experiences",
+        "FifthItem": "Education"
     },
     "Languages": {
         "English": "English",
@@ -17,7 +18,8 @@
         },
         "Projects": {
             "Title": "Latest Projects",
-            "Button": "View all"
+            "Button": "View all",
+            "Empty": "There are no projects to show."
         },
         "Skills": {
             "Title": "Skills & Knowledge",
@@ -45,6 +47,46 @@
             "SecondarySchool": "Secondary school",
             "FurtherEducation": "Further education",
             "University": "University"
+        }
+    },
+    "About": {
+        "Title": "About me",
+        "Me": "Me",
+        "General": "Hey, I am Berfan! I am a 19 years young software developer from Turkey, born in Switzerland. I am currently attending <schoolLink>Informatikmittelschule</schoolLink> in Basel and I am in my last, fourth year of school or internship. I am doing my internship at the company <companyLink>Smart Work AG Basel</companyLink> as a software developer and graduated on June 23, 2023 as a computer scientist EFZ with an EFZ grade of 5.4. In September 2023, the BSc study in the computer science field is then on the agenda for me!",
+        "History": {
+            "Title": "My Story",
+            "FirstSubtitle": "Age 14 (2017)",
+            "FirstSection": "I discovered the programming world when I was 14 years old. Through <minecraftLink>Minecraft</minecraftLink> (video game), my interest in developing was sparked, and I learned my very first programming language, <javaLink>Java</javaLink>. I became more and more fascinated with computer science and wanted to go to <schoolLink>Informatikmittelschule</schoolLink> (Computer Science School) to further my knowledge.",
+            "SecondSubtitle": "Age 16 - 19: Computer Science Middle School (2019 - 2022)",
+            "SecondSection": "In <schoolLink>Informatikmittelschule</schoolLink> (Computer Science School), I created websites using <htmlLink>HTML</htmlLink> & <cssLink>CSS</cssLink> and discovered my passion for websites. I have continued to develop and learn other programming languages such as <phpLink>PHP</phpLink>. In addition, I have expanded my knowledge of programming by learning <pythonLink>Python</pythonLink>, <csharpLink>C#</csharpLink>, and <bootstrapLink>Bootstrap</bootstrapLink> for CSS.",
+            "ThirdSubtitle": "Internship and Advanced Skills (2022 - 2023)",
+            "ThirdSection": "During my internship, which was part of my IMS degree, I learned the <angularLink>Angular framework</angularLink> and the <expressLink>Express backend</expressLink>. I also gained valuable experience in marketing, sales, graphic design and events. Meanwhile, I had to take the final exam for my computer science degree. I have privately developed and deepened my skills in <reactLink>React.js</reactLink> and <tailwindLink>Tailwind CSS</tailwindLink> by successfully developing a team-based TODO application.",
+            "FourthSubtitle": "Conclusion and Outlook (2023)",
+            "FourthSection": "On June 23, 2023, I received my Vocational Baccalaureate and Federal Certificate of Proficiency, completing a significant stage of my life. My next big step is the upcoming computer science studies in the <fhnwLink>FHNW</fhnwLink> in September 2023, where I will further deepen my knowledge in the field of software development."
+        },
+        "Favorites": {
+            "Title": "My Favorites",
+            "FirstItem": "🎨 Color",
+            "FirstResult": "Blue",
+            "SecondItem": "🍔 Food",
+            "SecondResult": "<foodLink>Etli Ekmek</foodLink> (Turkish Specialty)",
+            "ThirdItem": "🥤 Drink",
+            "ThirdResult": "Ice-tea",
+            "FourthItem": "🎮 Game",
+            "FourthResult": "<gameLink>CS:GO</gameLink>",
+            "FifthItem": "🌞 Season",
+            "FifthResult": "Spring",
+            "SixthItem": "🐶 Animal",
+            "SixthResult": "Red Panda"
+        },
+        "Tools": {
+            "Title": "Website Information",
+            "Software": {
+                "FirstItem": "This website is hosted on <cfLink>Cloudflare Pages</cfLink>.",
+                "SecondItem": "The website is inspired by <taniaLink>Tania Rascia's Portfolio</taniaLink>. Self-coded.",
+                "ThirdItem": "<b>IDE:</b> <vscodeLink>Visual Studio Code</vscodeLink>",
+                "FourthItem": "<b>Tools:</b> <viteLink>Vite Build-Tool</viteLink>, <reactLink>React.js</reactLink> (TS), <tailwindLink>TailwindCSS</tailwindLink>"
+            }
         }
     }
 }

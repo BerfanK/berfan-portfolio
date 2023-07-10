@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import { BsChevronDown, BsFilterLeft, BsSearch } from 'react-icons/bs';
+import { BsChevronDown, BsFilterLeft, BsFilterRight, BsSearch } from 'react-icons/bs';
 import { CgStyle } from 'react-icons/cg';
 import { SkillsProps } from '../../../../../config/Types';
 import { Data } from '../../../../../config/Data';
@@ -51,23 +51,23 @@ export default function Skills() {
     };
 
     return (
-        <section className="mt-20">
-            <h2 className="text-3xl font-bold">{t('Home.Skills.Title')}</h2>
-            <div className="flex flex-row items-center gap-4 mt-8">
-                <div className="relative hidden lg:block">
+        <section id="skills" className="mt-20">
+            <h2 className="lg:text-3xl font-bold">{t('Home.Skills.Title')}</h2>
+            <div className="flex flex-row items-center gap-4 mt-5">
+                <div className="relative">
                     <input
                         type="text"
                         value={searchSkill}
                         placeholder={t('Home.Skills.SearchPlaceholder')}
                         onChange={handleSearch}
-                        className="w-full border border-gray-700 text-gray-700 dark:text-gray-400 hover:border-gray-500/60 bg-transparent font-medium rounded-md py-2 px-3 pl-10 transition duration-200 focus:outline-none"
+                        className="text-sm lg:text-base w-full border border-gray-700 text-gray-700 dark:text-gray-400 hover:border-gray-500/60 bg-transparent font-medium rounded-md py-2 px-3 pl-10 transition duration-200 focus:outline-none"
                     />
                     <span className="absolute top-[11px] left-3">
-                        <BsSearch className="w-5 h-5 text-gray-700 dark:text-gray-400" />
+                        <BsSearch className="w-4 h-4 lg:w-5 lg:h-5 text-gray-700 dark:text-gray-400" />
                     </span>
                 </div>
                 <div onClick={handleSort} className="select-none flex flex-row items-center gap-2 border border-gray-700 hover:border-gray-500/60 duration-200 rounded cursor-pointer py-2 px-3">
-                    <BsFilterLeft className="h-6 w-6" />
+                    {sortSkill === 'asc' ? <BsFilterLeft className="h-6 w-6" /> : <BsFilterRight className="h-6 w-6" />}
                     <span className="text-base font-medium text-gray-700 dark:text-gray-400 hidden lg:inline-flex">
                         {sortSkill === 'asc' ? t('Home.Skills.BestRated') : t('Home.Skills.WorstRated')}
                     </span>
@@ -100,9 +100,9 @@ export default function Skills() {
             </div>
             <div></div>
 
-            <p className="text-base text-gray-700 dark:text-gray-400 font-light mt-4">{t('Home.Skills.Sidenote')}</p>
+            <p className="text-xs lg:text-base text-gray-700 dark:text-gray-400 font-light mt-4">{t('Home.Skills.Sidenote')}</p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4 pr-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 mt-4 pr-3">
                 {skillData.map((skill: SkillsProps, index: number) => (
                     <SkillItem key={index} name={skill.name} stars={skill.stars} svgIcon={skill.svgIcon} />
                 ))}
