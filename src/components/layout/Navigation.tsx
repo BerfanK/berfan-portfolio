@@ -52,8 +52,8 @@ export default function Navigation() {
     }, [isDarkmode]);
 
     return (
-        <div className="container my-10">
-            <header className="">
+        <div className="container my-10 bg-gray-200 dark:bg-black lg:dark:bg-transparent sticky py-2 px-5 lg:relative lg:p-0 lg:bg-transparent">
+            <header className="hidden lg:block">
                 <Link to="/" className="flex flex-row items-center gap-2">
                     <h1 className="text-xl font-semibold text-black dark:text-white">berfan-korkmaz.ch</h1>
                 </Link>
@@ -63,7 +63,7 @@ export default function Navigation() {
                     <Link
                         to="/about"
                         className={classNames(
-                            'text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
+                            'lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
                             location.pathname === '/about' ? 'font-semibold border-black dark:border-white' : ''
                         )}
                     >
@@ -72,7 +72,7 @@ export default function Navigation() {
                     <Link
                         to="/projects"
                         className={classNames(
-                            'text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
+                            'lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white',
                             location.pathname === '/projects' ? 'font-semibold border-black dark:border-white' : ''
                         )}
                     >
@@ -81,14 +81,14 @@ export default function Navigation() {
                     {location.pathname === '/' ? (
                         <a
                             href="#skills"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                         >
                             {t('Navigation.ThirdItem')}
                         </a>
                     ) : (
                         <Link
                             to="/?to=skills"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                         >
                             {t('Navigation.ThirdItem')}
                         </Link>
@@ -96,33 +96,35 @@ export default function Navigation() {
                     {location.pathname === '/' ? (
                         <a
                             href="#experiences"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                         >
                             {t('Navigation.FourthItem')}
                         </a>
                     ) : (
                         <Link
                             to="/?to=experiences"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
                         >
                             {t('Navigation.FourthItem')}
                         </Link>
                     )}
-                    {location.pathname === '/' ? (
-                        <a
-                            href="#education"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
-                        >
-                            {t('Navigation.FifthItem')}
-                        </a>
-                    ) : (
-                        <Link
-                            to="/?to=education"
-                            className="text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
-                        >
-                            {t('Navigation.FifthItem')}
-                        </Link>
-                    )}
+                    <div className="hidden lg:block">
+                        {location.pathname === '/' ? (
+                            <a
+                                href="#education"
+                                className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            >
+                                {t('Navigation.FifthItem')}
+                            </a>
+                        ) : (
+                            <Link
+                                to="/?to=education"
+                                className="lg:text-lg font-light text-gray-700 hover:text-black dark:text-gray-300 dark:hover:text-white duration-200 border-b-[3px] border-transparent hover:border-black dark:hover:border-white"
+                            >
+                                {t('Navigation.FifthItem')}
+                            </Link>
+                        )}
+                    </div>
                 </div>
                 <div className="hidden lg:flex flex-row items-center gap-2">
                     <LanguageSwitch />
