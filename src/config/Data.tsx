@@ -13,20 +13,28 @@ export class Data {
             company: 'Smart Work AG Basel',
             type: 'Internship',
             startDate: 'August 2022',
-            endDate: null,
+            endDate: 'September 2023',
             image: '/media/experiences/smartwork_internship.png',
-            isPresent: true,
+            isPresent: false,
         },
     ];
 
     public static readonly EDUCATION_DATA: EducationProps[] = [
         {
+            name: 'FHNW',
+            description: 'HighSchool',
+            startDate: 'September 2023',
+            endDate: null,
+            image: '/media/education/fhnw.jpg',
+            isPresent: true,
+        },
+        {
             name: 'Informatikmittelschule',
             description: 'FurtherEducation',
             startDate: 'August 2019',
-            endDate: null,
+            endDate: 'August 2023',
             image: '/media/education/wms.png',
-            isPresent: true,
+            isPresent: false,
         },
         {
             name: 'De Wette Sekundarschule',

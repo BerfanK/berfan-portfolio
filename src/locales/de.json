@@ -46,6 +46,7 @@
             "PrimarySchool": "Primarschule",
             "SecondarySchool": "Sekundarschule",
             "FurtherEducation": "Weiterführende Schule",
+            "HighSchool": "Fachhochschule",
             "University": "Universität"
         }
     },
